@@ -5,6 +5,8 @@
 using namespace std;
 
 int main() {
+    // Variabel untuk menyimpan pengaturan perulangan
+    // Ketika ulang = 1, maka program akan terus dijalankan
     int ulang = 1;
     do {
         // Array untuk menyimpan pertanyaan
