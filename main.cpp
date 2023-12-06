@@ -70,9 +70,9 @@ int main() {
         cout << setfill('-') << setw(135) << "" << setfill(' ') << endl;
         cout << endl << "Hasil Tes Kepribadian: " << endl;
         cout << "Skor anda: " << setw(10) << skor << endl;
-        if (skor < 4) {
+        if (skor <= 4) {
             cout << "Anda cenderung memiliki kepribadian introvert." << endl;
-        } else if (skor >= 4 && skor <= 7) {
+        } else if (skor >= 5 && skor <= 7) {
             cout << "Anda cenderung memiliki kepribadian ambivert (seimbang antara introvert dan ekstrovert)." << endl;
         } else {
             cout << "Anda cenderung ekstrovert." << endl;
