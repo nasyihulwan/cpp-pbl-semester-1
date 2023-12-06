@@ -1,0 +1,16 @@
+Tes Kepribadian Sederhana:
+
+Yang diadopsi: 
+Deklarasi Variabel: untuk mendeklarasi variabel jawaban(char) dan skor(int)
+Array: untuk menyimpan pertanyaan
+Perulangan(for): untuk mengulang setiap pertanyaan
+Switch case: untuk menambah skor berdasarkan jawaban
+If-else: untuk menentukan hasil tes
+
+Tambahan: memakai cin.ignore() untuk menghapus input buffer
+
+
+website yang dijadikan acuan/referensi dalam pembuatan PBL ini:
+1. https://www.alodokter.com/kepribadian-ekstrovert-kenali-ciri-ciri-serta-kelebihan-dan-kekurangannya#:~:text=Sifatnya%20yang%20ramah%2C%20ceria%2C%20dan,lebih%20baik%20dibandingkan%20seorang%20introvert.
+2. https://www.javatpoint.com/cin-ignore-function-in-cpp#:~:text=The%20main%20purpose%20of%20the,input%20buffer%20has%20been%20cleared.
+3. https://stackoverflow.com/questions/25020129/cin-ignorenumeric-limitsstreamsizemax-n
