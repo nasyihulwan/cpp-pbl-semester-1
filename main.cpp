@@ -36,7 +36,7 @@ int main() {
         cout << left << setw(5) << "No" << setw(120) << "Pertanyaan" << setw(10) << "Jawaban" << endl;
         cout << setfill('-') << setw(135) << "" << setfill(' ') << endl;
 
-        // Counter
+        // Counter untuk pertanyaan
         int no = 0;
 
         // Perulangan untuk setiap pertanyaan
@@ -89,7 +89,7 @@ int main() {
             cout << setfill('-') << setw(45) << "" << setfill(' ') << endl;
             cout << "Terimakasih telah menggunakan program ini!" << endl;
             cout << setfill('-') << setw(45) << "" << setfill(' ') << endl;
-            ulang = ulang - 1; // Keluar dari loop jika tidak ingin mengulang
+            ulang--; // Keluar dari loop jika tidak ingin mengulang
         }
 
     } while (ulang == 1);
