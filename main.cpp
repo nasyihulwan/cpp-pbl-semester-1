@@ -46,6 +46,8 @@ int main() {
             cout << left << setw(120) << pertanyaan[i];
             cin >> jawaban;
 
+            // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
+            // Menghindari masalah bacaan input yang tidak diinginkan setelah menggunakan cin.
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
             // Switch case untuk menambah skor berdasarkan jawaban
@@ -84,6 +86,9 @@ int main() {
         cin >> ulangi;
 
         if (ulangi != 'y' && ulangi != 'Y') {
+            cout << setfill('-') << setw(45) << "" << setfill(' ') << endl;
+            cout << "Terimakasih telah menggunakan program ini!" << endl;
+            cout << setfill('-') << setw(45) << "" << setfill(' ') << endl;
             ulang = ulang - 1; // Keluar dari loop jika tidak ingin mengulang
         }
 
