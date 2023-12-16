@@ -1,8 +1,8 @@
 Tes Kepribadian Sederhana:
 
 Yang diadopsi: 
-Deklarasi Variabel: untuk mendeklarasi variabel jawaban(char) dan skor(int)
-Array: untuk menyimpan pertanyaan
+Deklarasi Variabel: untuk mendeklarasi variabel jawaban(char), skor(int), kategori(string)
+Array: untuk menyimpan pertanyaan, gaya belajar menurut kepribadian
 Perulangan(for): untuk mengulang setiap pertanyaan
 Switch case: untuk menambah skor berdasarkan jawaban
 If-else: untuk menentukan hasil tes
@@ -10,8 +10,6 @@ If-else: untuk menentukan hasil tes
 Tambahan: memakai cin.ignore() untuk menghapus input buffer
 
 
-website yang dijadikan acuan/referensi dalam pembuatan PBL ini:
-1. https://www.alodokter.com/kepribadian-ekstrovert-kenali-ciri-ciri-serta-kelebihan-dan-kekurangannya#:~:text=Sifatnya%20yang%20ramah%2C%20ceria%2C%20dan,lebih%20baik%20dibandingkan%20seorang%20introvert.
-2. https://www.halodoc.com/artikel/ciri-kepribadian-ambivert-kombinasi-introvert-dan-ekstrovert
-3. https://www.javatpoint.com/cin-ignore-function-in-cpp#:~:text=The%20main%20purpose%20of%20the,input%20buffer%20has%20been%20cleared.
-4. https://stackoverflow.com/questions/25020129/cin-ignorenumeric-limitsstreamsizemax-n
+jurnal yang dijadikan acuan/referensi dalam pembuatan PBL ini:
+[1] Periantalo, J., & Azwar, S. (2017). PENGEMBANGAN SKALA KEPRIBADIAN SISWA SMA DARI TIPOLOGI KEPRIBADIAN JUNG DAN MYERS-BRIGGS. JURNAL SAINS SOSIO HUMANIORA, 1(2), 191-207. https://doi.org/10.22437/jssh.v1i2.4301
+[2] Sarah C, A. C, Cahyono, A. M., & Rayhan, A. R. (2022). STUDI PUSTAKA: ANALISIS GAYA BELAJAR MENURUT PENGELOMPOKAN TES KEPRIBADIAN MYERS BRIGGS TYPE INDICATOR (MBTI). Flourishing Journal, 2(2), 102–109. https://doi.org/10.17977/um070v2i22022p102-109
