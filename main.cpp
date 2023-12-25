@@ -16,51 +16,51 @@ int main() {
         cout << setfill('-') << setw(145) << "" << setfill(' ') << endl;
 
         // Header Kolom
-        cout << left << setw(5) << "No" << setw(120) << "Pertanyaan" << setw(10) << "Jawaban" << endl;
+        cout << left << setw(5) << "No" << setw(120) << "Pertanyaan" << setw(10) << "Jawaban (Ya/Tidak)" << endl;
         cout << setfill('-') << setw(145) << "" << setfill(' ') << endl;
 
         // Pertanyaan cara mendapatkan energi
         string pertanyaanEkstrovert[3] = {
-                "Apakah Anda seseorang yang inisiatif mengajak orang lain dalam memulai suatu hal? (Y/N)",
-                "Apakah Anda bersemangat dalam berinteraksi dengan orang-orang? (Y/N)",
-                "Apakah Anda menyukai komunikasi lisan dan banyak berbicara? (Y/N)"
+                "Apakah Anda seseorang yang inisiatif mengajak orang lain dalam memulai suatu hal? (Y/T)",
+                "Apakah Anda bersemangat dalam berinteraksi dengan orang-orang? (Y/T)",
+                "Apakah Anda menyukai komunikasi lisan dan banyak berbicara? (Y/T)"
         };
         string pertanyaanIntrovert[2] = {
-                "Apakah Anda cenderung melakukan sesuatu secara lebih hati hati? (Y/N)",
-                "Apakah Anda cenderung lebih menyenangi sesuatu secara mendalam, spesifik, lama? (Y/N)"
+                "Apakah Anda cenderung melakukan sesuatu secara lebih hati hati? (Y/T)",
+                "Apakah Anda cenderung lebih menyenangi sesuatu secara mendalam, spesifik, lama? (Y/T)"
         };
 
         // Pertanyaan cara memperoleh informasi
         string pertanyaanSensing[3] = {
-                "Apakah Anda cenderung lebih menyukai sesuatu yang secara lazim dan merupakan hal biasa? (Y/N)",
-                "Apakah Anda cenderung lebih menyenangi sesuatu yang aman, nyaman dan sederhana? (Y/N)",
-                "Apakah Anda lebih menyenangi sesuatu yang bersifat nyata, kongkrit, dapat diukur? (Y/N)"
+                "Apakah Anda cenderung lebih menyukai sesuatu yang secara lazim dan merupakan hal biasa? (Y/T)",
+                "Apakah Anda cenderung lebih menyenangi sesuatu yang aman, nyaman dan sederhana? (Y/T)",
+                "Apakah Anda lebih menyenangi sesuatu yang bersifat nyata, kongkrit, dapat diukur? (Y/T)"
         };
         string pertanyaanINtuition[2] = {
-                "Apakah Anda cenderung lebih berorientasi masa depan dan memiliki angan-angan yang tinggi? (Y/N)",
-                "Apakah Anda cenderung melakukan sesuatu secara acak dan hal yang esensi (inti atau hal yang pokok) ? (Y/N)"
+                "Apakah Anda cenderung lebih berorientasi masa depan dan memiliki angan-angan yang tinggi? (Y/T)",
+                "Apakah Anda cenderung melakukan sesuatu secara acak dan hal yang esensi (inti atau hal yang pokok) ? (Y/T)"
         };
 
         // Pertanyaan cara mengambil keputusan
         string pertanyaanThinking[3] = {
-                "Apakah Anda cenderung menilai sesuatu berdasarkan akal sehat dan objektif? (Y/N)",
-                "Apakah Anda cenderung mengkritisi sesuatu dengan mudah? (Y/N)",
-                "Apakah Anda cenderung menjadi seseorang yang kokoh terhadap pendirian dan mempertahankan pendapat saat dikritik? (Y/N)"
+                "Apakah Anda cenderung menilai sesuatu berdasarkan akal sehat dan objektif? (Y/T)",
+                "Apakah Anda cenderung mengkritisi sesuatu dengan mudah? (Y/T)",
+                "Apakah Anda cenderung menjadi seseorang yang kokoh terhadap pendirian dan mempertahankan pendapat saat dikritik? (Y/T)"
         };
         string pertanyaanFeeling[2] = {
-                "Apakah Anda cenderung lebih mudah berempati dan terlibat secara emosional dengan orang? (Y/N)",
-                "Apakah Anda cenderung lebih mudah menerima penjelasan, mendukung atau setuju? (Y/N)"
+                "Apakah Anda cenderung lebih mudah berempati dan terlibat secara emosional dengan orang? (Y/T)",
+                "Apakah Anda cenderung lebih mudah menerima penjelasan, mendukung atau setuju? (Y/T)"
         };
 
         // Pertanyaan orientasi terhadap kehidupan
         string pertanyaanJudging[3] = {
-                "Apakah Anda cenderung mengerjakan tugas sejak awal dibagikan? (Y/N)",
-                "Apakah Anda memiliki perencanaan terhadap sesuatu? (Y/N)",
-                "Apakah Anda membuat kesepakatan sebelum memulai sesuatu? (Y/N)"
+                "Apakah Anda cenderung mengerjakan tugas sejak awal dibagikan? (Y/T)",
+                "Apakah Anda memiliki perencanaan terhadap sesuatu? (Y/T)",
+                "Apakah Anda membuat kesepakatan sebelum memulai sesuatu? (Y/T)"
         };
         string pertanyaanPerceiving[2] = {
-                "Apakah Anda seseorang yang fleksibel terhadap jadwal? (Y/N)",
-                "Apakah Anda seseorang yang menyukai kehidupan yang bebas dan santai? (Y/N)"
+                "Apakah Anda seseorang yang fleksibel terhadap jadwal? (Y/T)",
+                "Apakah Anda seseorang yang menyukai kehidupan yang bebas dan santai? (Y/T)"
         };
 
         // Variabel untuk menyimpan jawaban user
@@ -96,8 +96,8 @@ int main() {
                 case 'Y':
                     skorEkstrovert += 1;
                     break;
-                case 'n':
-                case 'N':
+                case 't':
+                case 'T':
                     skorIntrovert += 1;
                     break;
                 default:
@@ -123,8 +123,8 @@ int main() {
           case 'Y':
             skorIntrovert += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             skorEkstrovert += 1;
             break;
           default:
@@ -150,8 +150,8 @@ int main() {
           case 'Y':
             skorSensing += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -176,8 +176,8 @@ int main() {
           case 'Y':
             skorINtuition += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -202,8 +202,8 @@ int main() {
           case 'Y':
             skorThinking += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -228,8 +228,8 @@ int main() {
           case 'Y':
             skorFeeling += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -254,8 +254,8 @@ int main() {
           case 'Y':
             skorJudging += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -280,8 +280,8 @@ int main() {
           case 'Y':
             skorPerceiving += 1;
             break;
-          case 'n':
-          case 'N':
+          case 't':
+          case 'T':
             break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -385,7 +385,7 @@ int main() {
 
         // Tanya apakah ingin mengulang tes
         char ulangi;
-        cout << "Apakah Anda ingin mengulang tes? (Y/N): ";
+        cout << "Apakah Anda ingin mengulang tes? (Y/T): ";
         cin >> ulangi;
 
         if (ulangi != 'y' && ulangi != 'Y') {
