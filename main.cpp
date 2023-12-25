@@ -19,53 +19,40 @@ int main() {
         cout << left << setw(5) << "No" << setw(120) << "Pertanyaan" << setw(10) << "Jawaban (Ya/Tidak)" << endl;
         cout << setfill('-') << setw(145) << "" << setfill(' ') << endl;
 
-        // Pertanyaan cara mendapatkan energi
-        string pertanyaanEkstrovert[3] = {
-                "Apakah Anda seseorang yang inisiatif mengajak orang lain dalam memulai suatu hal? (Y/T)",
-                "Apakah Anda bersemangat dalam berinteraksi dengan orang-orang? (Y/T)",
-                "Apakah Anda menyukai komunikasi lisan dan banyak berbicara? (Y/T)"
-        };
-        string pertanyaanIntrovert[2] = {
-                "Apakah Anda cenderung melakukan sesuatu secara lebih hati hati? (Y/T)",
-                "Apakah Anda cenderung lebih menyenangi sesuatu secara mendalam, spesifik, lama? (Y/T)"
-        };
-
-        // Pertanyaan cara memperoleh informasi
-        string pertanyaanSensing[3] = {
-                "Apakah Anda cenderung lebih menyukai sesuatu yang secara lazim dan merupakan hal biasa? (Y/T)",
-                "Apakah Anda cenderung lebih menyenangi sesuatu yang aman, nyaman dan sederhana? (Y/T)",
-                "Apakah Anda lebih menyenangi sesuatu yang bersifat nyata, kongkrit, dapat diukur? (Y/T)"
-        };
-        string pertanyaanINtuition[2] = {
-                "Apakah Anda cenderung lebih berorientasi masa depan dan memiliki angan-angan yang tinggi? (Y/T)",
-                "Apakah Anda cenderung melakukan sesuatu secara acak dan hal yang esensi (inti atau hal yang pokok) ? (Y/T)"
-        };
-
-        // Pertanyaan cara mengambil keputusan
-        string pertanyaanThinking[3] = {
-                "Apakah Anda cenderung menilai sesuatu berdasarkan akal sehat dan objektif? (Y/T)",
-                "Apakah Anda cenderung mengkritisi sesuatu dengan mudah? (Y/T)",
-                "Apakah Anda cenderung menjadi seseorang yang kokoh terhadap pendirian dan mempertahankan pendapat saat dikritik? (Y/T)"
-        };
-        string pertanyaanFeeling[2] = {
-                "Apakah Anda cenderung lebih mudah berempati dan terlibat secara emosional dengan orang? (Y/T)",
-                "Apakah Anda cenderung lebih mudah menerima penjelasan, mendukung atau setuju? (Y/T)"
-        };
-
-        // Pertanyaan orientasi terhadap kehidupan
-        string pertanyaanJudging[3] = {
-                "Apakah Anda cenderung mengerjakan tugas sejak awal dibagikan? (Y/T)",
-                "Apakah Anda memiliki perencanaan terhadap sesuatu? (Y/T)",
-                "Apakah Anda membuat kesepakatan sebelum memulai sesuatu? (Y/T)"
-        };
-        string pertanyaanPerceiving[2] = {
-                "Apakah Anda seseorang yang fleksibel terhadap jadwal? (Y/T)",
-                "Apakah Anda seseorang yang menyukai kehidupan yang bebas dan santai? (Y/T)"
+        // Pertanyaan
+        string pertanyaan[20] = {
+            // Pertanyaan Ekstrovert
+            "Apakah Anda seseorang yang inisiatif mengajak orang lain dalam memulai suatu hal? (Y/T)",
+            "Apakah Anda bersemangat dalam berinteraksi dengan orang-orang? (Y/T)",
+            "Apakah Anda menyukai komunikasi lisan dan banyak berbicara? (Y/T)",
+            // Pertanyaan Introvert
+            "Apakah Anda cenderung melakukan sesuatu secara lebih hati hati? (Y/T)",
+            "Apakah Anda cenderung lebih menyenangi sesuatu secara mendalam, spesifik, lama? (Y/T)",
+            // Pertanyaan Sensing
+            "Apakah Anda cenderung lebih menyukai sesuatu yang secara lazim dan merupakan hal biasa? (Y/T)",
+            "Apakah Anda cenderung lebih menyenangi sesuatu yang aman, nyaman dan sederhana? (Y/T)",
+            "Apakah Anda lebih menyenangi sesuatu yang bersifat nyata, kongkrit, dapat diukur? (Y/T)",
+            // Pertanyaan iNtuition
+            "Apakah Anda cenderung lebih berorientasi masa depan dan memiliki angan-angan yang tinggi? (Y/T)",
+            "Apakah Anda cenderung melakukan sesuatu secara acak dan hal yang esensi (inti atau hal yang pokok) ? (Y/T)",
+            // Pertanyan Thinking
+            "Apakah Anda cenderung menilai sesuatu berdasarkan akal sehat dan objektif? (Y/T)",
+            "Apakah Anda cenderung mengkritisi sesuatu dengan mudah? (Y/T)",
+            "Apakah Anda cenderung menjadi seseorang yang kokoh terhadap pendirian dan mempertahankan pendapat saat dikritik? (Y/T)",
+            // Pertanyaan Feeling
+            "Apakah Anda cenderung lebih mudah berempati dan terlibat secara emosional dengan orang? (Y/T)",
+            "Apakah Anda cenderung lebih mudah menerima penjelasan, mendukung atau setuju? (Y/T)",
+            // Pertanyaan Judging
+            "Apakah Anda cenderung mengerjakan tugas sejak awal dibagikan? (Y/T)",
+            "Apakah Anda memiliki perencanaan terhadap sesuatu? (Y/T)",
+            "Apakah Anda membuat kesepakatan sebelum memulai sesuatu? (Y/T)",
+            // Pertanyaan Perceiving
+            "Apakah Anda seseorang yang fleksibel terhadap jadwal? (Y/T)",
+            "Apakah Anda seseorang yang menyukai kehidupan yang bebas dan santai? (Y/T)"
         };
 
         // Variabel untuk menyimpan jawaban user
         char jawaban;
-
         // Variabel untuk skor kepribadian
         int skorEkstrovert = 0;
         int skorIntrovert = 0;
@@ -76,213 +63,52 @@ int main() {
         int skorJudging = 0;
         int skorPerceiving = 0;
 
+
         // Counter untuk pertanyaan
         int no = 0;
-
         // Perulangan untuk setiap pertanyaan
-        // Ekstrovert
-        for (int i = 0; i < 3; i++) {
-            no++;
-            cout << left << setw(5) << no;
-            cout << left << setw(120) << pertanyaanEkstrovert[i];
-            cin >> jawaban;
-
-            // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-            // Switch case untuk menambah skor berdasarkan jawaban
-            switch (jawaban) {
-                case 'y':
-                case 'Y':
-                    skorEkstrovert += 1;
-                    break;
-                case 't':
-                case 'T':
-                    skorIntrovert += 1;
-                    break;
-                default:
-                    cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-                    i--;  // Mengurangi nilai i agar pertanyaan diulang
-                    no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-            }
-        }
-
-        // Intovert
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 20; i++) {
           no++;
           cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanIntrovert[i];
+          cout << left << setw(120) << pertanyaan[i];
           cin >> jawaban;
 
           // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
           cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-          // Switch case untuk menambah skor berdasarkan jawaban
+          // Switch case untuk memanipulasi skor berdasarkan jawaban
           switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorIntrovert += 1;
-            break;
-          case 't':
-          case 'T':
-            skorEkstrovert += 1;
-            break;
-          default:
-            cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-            i--;  // Mengurangi nilai i agar pertanyaan diulang
-            no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-          }
-        }
-
-        // Sensing
-        for (int i = 0; i < 3; i++) {
-          no++;
-          cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanSensing[i];
-          cin >> jawaban;
-
-          // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-          // Switch case untuk menambah skor berdasarkan jawaban
-          switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorSensing += 1;
-            break;
-          case 't':
-          case 'T':
-            break;
-          default:
-            cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-            i--;  // Mengurangi nilai i agar pertanyaan diulang
-            no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-          }
-        }
-
-        // iNtuition
-        for (int i = 0; i < 2; i++) {
-          no++;
-          cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanINtuition[i];
-          cin >> jawaban;
-
-          // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-          // Switch case untuk menambah skor berdasarkan jawaban
-          switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorINtuition += 1;
-            break;
-          case 't':
-          case 'T':
-            break;
-          default:
-            cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-            i--;  // Mengurangi nilai i agar pertanyaan diulang
-            no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-          }
-        }
-
-        // Thinking
-        for (int i = 0; i < 3; i++) {
-          no++;
-          cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanThinking[i];
-          cin >> jawaban;
-
-          // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-          // Switch case untuk menambah skor berdasarkan jawaban
-          switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorThinking += 1;
-            break;
-          case 't':
-          case 'T':
-            break;
-          default:
-            cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-            i--;  // Mengurangi nilai i agar pertanyaan diulang
-            no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-          }
-        }
-
-        // Feeling
-        for (int i = 0; i < 2; i++) {
-          no++;
-          cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanFeeling[i];
-          cin >> jawaban;
-
-          // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-          // Switch case untuk menambah skor berdasarkan jawaban
-          switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorFeeling += 1;
-            break;
-          case 't':
-          case 'T':
-            break;
-          default:
-            cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-            i--;  // Mengurangi nilai i agar pertanyaan diulang
-            no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-          }
-        }
-
-        // Judging
-        for (int i = 0; i < 3; i++) {
-          no++;
-          cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanJudging[i];
-          cin >> jawaban;
-
-          // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-          // Switch case untuk menambah skor berdasarkan jawaban
-          switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorJudging += 1;
-            break;
-          case 't':
-          case 'T':
-            break;
-          default:
-            cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
-            i--;  // Mengurangi nilai i agar pertanyaan diulang
-            no--; // Mengurangi nilai no agar sesuai dengan nomor pertanyaan
-          }
-        }
-
-        // Perceiving
-        for (int i = 0; i < 2; i++) {
-          no++;
-          cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaanPerceiving[i];
-          cin >> jawaban;
-
-          // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-          // Switch case untuk menambah skor berdasarkan jawaban
-          switch (jawaban) {
-          case 'y':
-          case 'Y':
-            skorPerceiving += 1;
-            break;
-          case 't':
-          case 'T':
-            break;
+            case 'y':
+            case 'Y':
+              if (i == 0 || i == 1 || i == 2) {
+                skorEkstrovert += 1;
+                skorIntrovert -= 1;
+              } else if (i == 3 || i == 4) {
+                skorIntrovert += 1;
+                skorEkstrovert -= 1;
+              } else if (i == 5 || i == 6 || i == 7) {
+                skorSensing += 1;
+                skorINtuition -= 1;
+              } else if (i == 8 || i == 9) {
+                skorINtuition += 1;
+                skorSensing -= 1;
+              } else if (i == 10 || i == 11 || i == 12) {
+                skorThinking += 1;
+                skorFeeling -= 1;
+              } else if (i == 13 || i == 14) {
+                skorFeeling += 1;
+                skorThinking -= 1;
+              } else if (i == 15 || i == 16 || i == 17) {
+                skorJudging += 1;
+                skorPerceiving -= 1;
+              } else if (i == 18 || i == 19) {
+                skorPerceiving += 1;
+                skorJudging -= 1;
+              }
+              break;
+            case 't':
+            case 'T':
+              break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
             i--;  // Mengurangi nilai i agar pertanyaan diulang
@@ -298,19 +124,16 @@ int main() {
         } else {
           caraMendapatkanEnergi = "I";
         }
-
         if (skorSensing > skorINtuition) {
           caraMemperolehInformasi = "S";
         } else {
           caraMemperolehInformasi = "N";
         }
-
         if (skorThinking > skorFeeling) {
           caraMengambilKeputusan = "T";
         } else {
           caraMengambilKeputusan = "F";
         }
-
         if (skorJudging > skorPerceiving) {
           orientasiTerhadapKehidupan = "J";
         } else {
@@ -343,40 +166,52 @@ int main() {
         } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << "ESTJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ESTJ;
-        } else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISFP" << endl;
           cout << "Gaya belajar: " << "Anda " << ISFP;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ESFP" << endl;
           cout << "Gaya belajar: " << "Anda " << ESFP;
-        } else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISTP" << endl;
           cout << "Gaya belajar: " << "Anda " << ISTP;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ESTP" << endl;
           cout << "Gaya belajar: " << "Anda " << ESTP;
-        } else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
+        }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISFJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ISFJ;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ESFJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ESFJ;
-        } else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISFJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ISFJ;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ENTP" << endl;
           cout << "Gaya belajar: " << "Anda " << ENTP;
-        } else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
+        }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "INTJ" << endl;
           cout << "Gaya belajar: " << "Anda " << INTJ;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ENFJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ENFJ;
-        } else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "INFP" << endl;
           cout << "Gaya belajar: " << "Anda " << INFP;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ENFP" << endl;
           cout << "Gaya belajar: " << "Anda " << ENFP;
         }
