@@ -54,8 +54,8 @@ int main() {
         // Variabel untuk menyimpan jawaban user
         char jawaban;
         // Variabel untuk skor kepribadian
-        int skorEkstrovert = 0;
-        int skorIntrovert = 0;
+        int skorEkstrovert = 0; // 2
+        int skorIntrovert = 0; // 2
         int skorSensing = 0;
         int skorINtuition = 0;
         int skorThinking = 0;
@@ -70,7 +70,7 @@ int main() {
         for (int i = 0; i < 20; i++) {
           no++;
           cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaan[i];
+          cout << left << setw(120) << pertanyaan[i] << "Indeks I:" << i << endl;
           cin >> jawaban;
 
           // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
@@ -82,32 +82,41 @@ int main() {
             case 'Y':
               if (i == 0 || i == 1 || i == 2) {
                 skorEkstrovert += 1;
-                skorIntrovert -= 1;
               } else if (i == 3 || i == 4) {
                 skorIntrovert += 1;
-                skorEkstrovert -= 1;
               } else if (i == 5 || i == 6 || i == 7) {
                 skorSensing += 1;
-                skorINtuition -= 1;
               } else if (i == 8 || i == 9) {
                 skorINtuition += 1;
-                skorSensing -= 1;
               } else if (i == 10 || i == 11 || i == 12) {
                 skorThinking += 1;
-                skorFeeling -= 1;
               } else if (i == 13 || i == 14) {
                 skorFeeling += 1;
-                skorThinking -= 1;
               } else if (i == 15 || i == 16 || i == 17) {
                 skorJudging += 1;
-                skorPerceiving -= 1;
               } else if (i == 18 || i == 19) {
                 skorPerceiving += 1;
-                skorJudging -= 1;
               }
               break;
             case 't':
             case 'T':
+              if (i == 0 || i == 1 || i == 2) {
+                skorIntrovert += 1;
+              } else if (i == 3 || i == 4) {
+                skorEkstrovert += 1;
+              } else if (i == 5 || i == 6 || i == 7) {
+                skorINtuition += 1;
+              } else if (i == 8 || i == 9) {
+                skorSensing += 1;
+              } else if (i == 10 || i == 11 || i == 12) {
+                skorFeeling += 1;
+              } else if (i == 13 || i == 14) {
+                skorThinking += 1;
+              } else if (i == 15 || i == 16 || i == 17) {
+                skorPerceiving += 1;
+              } else if (i == 18 || i == 19) {
+                skorJudging += 1;
+              }
               break;
           default:
             cout << "Jawaban tidak valid. Masukkan jawaban yang benar." << endl;
@@ -117,23 +126,31 @@ int main() {
         }
 
         // Menentukan kepribadian
-        string caraMendapatkanEnergi, caraMemperolehInformasi, caraMengambilKeputusan, orientasiTerhadapKehidupan;
+        string caraMendapatkanEnergi,
+            caraMemperolehInformasi,
+            caraMengambilKeputusan,
+            orientasiTerhadapKehidupan;
 
+        // Ekstrovert = 3
+        // Introvert = 2
         if (skorEkstrovert > skorIntrovert) {
           caraMendapatkanEnergi = "E";
         } else {
           caraMendapatkanEnergi = "I";
         }
+
         if (skorSensing > skorINtuition) {
           caraMemperolehInformasi = "S";
         } else {
           caraMemperolehInformasi = "N";
         }
+
         if (skorThinking > skorFeeling) {
           caraMengambilKeputusan = "T";
         } else {
           caraMengambilKeputusan = "F";
         }
+
         if (skorJudging > skorPerceiving) {
           orientasiTerhadapKehidupan = "J";
         } else {
@@ -156,14 +173,22 @@ int main() {
         string INFJ = "mudah memahami melalui teori, belajar secara terstruktur dan jelas";
         string ENFJ = "cepat belajar dalam grup, baik dalam mengajari orang lain, memiliki rasa tanggung jawab yang tinggi terhadap tugas-tugasnya";
         string INFP = "lebih nyaman belajar sendiri, tidak suka dibatasi terutama dalam hal kreativitas, belajar melalui makna dari sebuah konsep, mudah menyerap informasi baru.";
-        string ENFP = "senang belajar secara berkelompok dan bertukar ide, menyukai belajar di tempat yang Anda sukai, menjadi termotivasi ketika dapat menerapkan teori dan konsep sebagai self-growth dan berdampak positif bagi orang lain.";
+        string ENFP = "senang belajar secara berkelompok dan bertukar ide, menyukai belajar di tempat yang Anda sukai, menjadi termotivasi ketika dapat menerapkan teori dan konsep sebagai "
+                      "self-growth dan berdampak positif bagi orang lain.";
 
         cout << setfill('-') << setw(145) << "" << setfill(' ') << endl;
         cout << endl << "Hasil Tes: " << endl;
+
+        // caraMendapatkanEnergi = E,
+        // caraMemperolehInformasi = S,
+        // caraMengambilKeputusan = T,
+        // orientasiTerhadapKehidupan= J
+
         if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISTJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ISTJ;
-        } else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << "ESTJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ESTJ;
         }
