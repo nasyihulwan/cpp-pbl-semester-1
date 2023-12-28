@@ -54,8 +54,8 @@ int main() {
         // Variabel untuk menyimpan jawaban user
         char jawaban;
         // Variabel untuk skor kepribadian
-        int skorEkstrovert = 0; // 2
-        int skorIntrovert = 0; // 2
+        int skorEkstrovert = 0; 
+        int skorIntrovert = 0; 
         int skorSensing = 0;
         int skorINtuition = 0;
         int skorThinking = 0;
@@ -131,8 +131,6 @@ int main() {
             caraMengambilKeputusan,
             orientasiTerhadapKehidupan;
 
-        // Ekstrovert = 3
-        // Introvert = 2
         if (skorEkstrovert > skorIntrovert) {
           caraMendapatkanEnergi = "E";
         } else {
@@ -178,11 +176,6 @@ int main() {
 
         cout << setfill('-') << setw(145) << "" << setfill(' ') << endl;
         cout << endl << "Hasil Tes: " << endl;
-
-        // caraMendapatkanEnergi = E,
-        // caraMemperolehInformasi = S,
-        // caraMengambilKeputusan = T,
-        // orientasiTerhadapKehidupan= J
 
         if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "S" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISTJ" << endl;
