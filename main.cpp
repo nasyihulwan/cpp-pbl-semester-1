@@ -220,6 +220,10 @@ int main() {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ISFJ" << endl;
           cout << "Gaya belajar: " << "Anda " << ISFJ;
         }
+        else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
+          cout << "Kepribadian MBTI Anda: " << setw(10) << "INTP" << endl;
+          cout << "Gaya belajar: " << "Anda " << INTP;
+        }
         else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "P") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ENTP" << endl;
           cout << "Gaya belajar: " << "Anda " << ENTP;
@@ -227,6 +231,10 @@ int main() {
         else if (caraMendapatkanEnergi == "I" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "INTJ" << endl;
           cout << "Gaya belajar: " << "Anda " << INTJ;
+        }
+        else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "T" && orientasiTerhadapKehidupan == "J") {
+          cout << "Kepribadian MBTI Anda: " << setw(10) << "ENTJ" << endl;
+          cout << "Gaya belajar: " << "Anda " << ENTJ;
         }
         else if (caraMendapatkanEnergi == "E" && caraMemperolehInformasi == "N" && caraMengambilKeputusan == "F" && orientasiTerhadapKehidupan == "J") {
           cout << "Kepribadian MBTI Anda: " << setw(10) << "ENFJ" << endl;
