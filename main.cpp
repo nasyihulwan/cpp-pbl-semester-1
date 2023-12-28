@@ -256,7 +256,7 @@ int main() {
         cout << "Apakah Anda ingin mengulang tes? (Y/T): ";
         cin >> ulangi;
 
-        if (ulangi != 'y' && ulangi != 'Y') {
+        if (ulangi != 'y' || ulangi != 'Y') {
             cout << setfill('-') << setw(45) << "" << setfill(' ') << endl;
             cout << "Terimakasih telah menggunakan program ini!" << endl;
             cout << setfill('-') << setw(45) << "" << setfill(' ') << endl;
