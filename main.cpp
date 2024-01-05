@@ -70,7 +70,7 @@ int main() {
         for (int i = 0; i < 20; i++) {
           no++;
           cout << left << setw(5) << no;
-          cout << left << setw(120) << pertanyaan[i] << "Indeks I:" << i << endl;
+          cout << left << setw(120) << pertanyaan[i] << endl;
           cin >> jawaban;
 
           // Mengabaikan input buffer untuk membersihkan sisa karakter dalam buffer hingga menemukan newline ('\n').
